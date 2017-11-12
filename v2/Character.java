@@ -16,17 +16,20 @@ public class Character {
 		return defense;
 	}
 	
-	public static void lowerHP(int amt) {
+	public static int lowerHP(int amt) {
 		if (amt > life)
 			life = 0;
-		life -= amt;
+		return life -= amt;
 	}
 	
-	public static void attack(Character user) {
+	public static int attack(Character user) {
 		int damage;
 		if (aRate < 0)
 			damage = 0;
-		damage = (int)((strength * aRate) - user.getDefense());
+		else
+			damage = (int)((strength * aRate) - user.getDefense());
+		user.lowerHP(damage);
+		return damage;
 	}
 		
 
