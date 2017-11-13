@@ -23,7 +23,7 @@ public class Monster extends Character {
     }
 
     //returns boolean indicating living/dead
-    public static boolean isAlive() {
+    /*public static boolean isAlive() {
 	if (life == 0)
 	    return false;
 	return true;
@@ -53,6 +53,6 @@ public class Monster extends Character {
     		damage = (int) (strength * aRate) - prot.getDefense();
     	prot.lowerHP(damage);
     	return damage;
-    }
+    }*/
 
 }
