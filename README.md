@@ -1,6 +1,6 @@
 # YoRPG_IJK
 
-# Elf Hero
+# Wizard Hero
 ## Lightly armed and lightly armored with a quick attack.
 * 75 HP
 * 50 Strength
