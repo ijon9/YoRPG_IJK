@@ -6,11 +6,11 @@
 public class Protagonist extends Character {
 
     //Attributes
-    public static String name;
-    public static int life;
-    public static int strength;
-    public static int defense;
-    public static double aRate; //attack rating 
+    protected static String name;
+    protected static int life;
+    protected static int strength;
+    protected static int defense;
+    protected static double aRate; //attack rating 
 
     //Constructor
     public Protagonist(String newname) {

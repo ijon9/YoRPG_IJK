@@ -1,9 +1,10 @@
 public class Character {
 	//Attributes
-	private static int life;
-	private static int strength;
-	private static int defense;
-	private static double aRate;
+	protected static String name;
+	protected static int life;
+	protected static int strength;
+	protected static int defense;
+	protected static double aRate;
 	
 	//Methods
 	public static boolean isAlive() {
@@ -12,6 +13,10 @@ public class Character {
 		return true;
 	}
 	
+	public static String getName() {
+	return name;
+    }
+    
 	public static int getDefense() {
 		return defense;
 	}

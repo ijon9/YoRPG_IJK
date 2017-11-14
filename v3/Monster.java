@@ -5,17 +5,17 @@
 
 public class Monster extends Character {
 
-    //Attributes
-    private static String name;
-    private static int life;
-    private static int strength;
-    private static int defense;
-    private static double aRate;
+    // Attributes
+    protected static String name;
+    protected static int life;
+    protected static int strength;
+    protected static int defense;
+    protected static double aRate;
 
 
     //Constructor
     public Monster() {
-	name = "Ghost";
+	name = "Mon";
 	life = 150;
 	strength = (int) (Math.random() * 46) + 20 ; //random value in range [20,65)
 	defense = 20;
