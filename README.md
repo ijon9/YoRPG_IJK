@@ -20,3 +20,25 @@
 * 75 Strength
 * 2 Defense
 * 2 Attack Rate
+
+# Vampire
+## High damage, low health and defense
+* 100 HP
+* [40, 106) Strength
+* 20 Defense
+* 2 Attack Rate
+
+# Werewolf 
+## Well balanced monster 
+* 200 HP
+* [20, 65) Strength
+* 50 Defense
+* 1 Attack Rate
+
+# Zombie
+## High defense and health, but low offense
+* 250 HP
+* [15, 51) Strength
+* 40 Defense
+* 1 Attack Rate
+
