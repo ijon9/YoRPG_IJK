@@ -10,7 +10,7 @@ public class Protagonist extends Character {
     public static int life;
     public static int strength;
     public static int defense;
-    public static double aRate;
+    public static double aRate; //attack rating 
 
     //Constructor
     public Protagonist(String newname) {

@@ -17,7 +17,7 @@ public class Monster extends Character {
     public Monster() {
 	name = "Ghost";
 	life = 150;
-	strength = (int) (Math.random() * 46) + 20 ;
+	strength = (int) (Math.random() * 46) + 20 ; //random value in range [20,65)
 	defense = 20;
 	aRate = 1;
     }
