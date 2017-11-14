@@ -22,6 +22,7 @@ public class YoRPG
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int hero;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -74,8 +75,27 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
+    s = "\nChoose your hero:\n";
+    s += "\t1: Elf\n";
+    s += "\t2: Knight\n";
+    s += "\t3: Wizard\n";
+    s += "Selection: ";
+    System.out.println(s);
+
+    try {
+      hero = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if (hero == 1)
+      pat = new Elf(name);
+    else if (hero == 2)
+      pat = new Knight(name);
+    else if (hero == 3)
+      pat = new Wizard(name);
+    else
+      pat = new Protagonist( name );
 
   }//end newGame()
 
