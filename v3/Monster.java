@@ -24,7 +24,7 @@ public class Monster extends Character {
 
     //returns boolean indicating living/dead
     public static boolean isAlive() {
-	if (life == 0)
+	if (life <= 0)
 	    return false;
 	return true;
     }

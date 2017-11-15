@@ -13,6 +13,13 @@ public class Protagonist extends Character {
     protected static double aRate; //attack rating 
 
     //Constructor
+    public Protagonist() {
+    name = "";
+    life = 100;
+    strength = 5;
+    defense = 5;
+    aRate = 2.5;
+    }
     public Protagonist(String newname) {
 	name = newname;
 	life = 100;
