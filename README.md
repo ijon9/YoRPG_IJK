@@ -1,4 +1,4 @@
-# YoRPG_IJK
+# YoRPG_IJK: Kenny Lin, Isaac Jon
 
 # To Do
 ## Create rock paper scissor esque attack style with hero vs monster type

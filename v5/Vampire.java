@@ -5,6 +5,7 @@ public class Vampire extends Monster {
 	strength = (int) (Math.random() * 66) + 40 ; //random value in range [20,65)
 	defense = 20;
 	aRate = 2;
+	type = "Vampire";
     }
 
     public String about() {

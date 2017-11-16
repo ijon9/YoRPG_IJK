@@ -6,11 +6,7 @@
 public class Monster extends Character {
 
     // Attributes
-    protected String name;
-    protected int life;
-    protected int strength;
-    protected int defense;
-    protected double aRate;
+    protected String type;
 
 
     //Constructor
@@ -20,39 +16,19 @@ public class Monster extends Character {
 	strength = (int) (Math.random() * 46) + 20 ; //random value in range [20,65)
 	defense = 20;
 	aRate = 1;
+    type = "";
     }
 
-    //returns boolean indicating living/dead
-    public boolean isAlive() {
-	if (life <= 0)
-	    return false;
-	return true;
+    public int attack(Protagonist user) {
+        int damage;
+        if (aRate < 0)
+            damage = 0;
+        else
+            damage = (int)((strength * aRate) - user.getDefense());
+        user.lowerHP(damage);
+        return damage;
     }
 
-    //returns defense attribute
-    public int getDefense() {
-	return defense;
-    }
-
-    //returns name attribute
-    public String getName() {
-	return name;
-    }
-
-    //decreases life by parameter
-    public int lowerHP(int n) {
-	return life -= n;
-    }
-
-    //calculates attack
-    public int attack(Protagonist prot) {
-    	int damage; 
-    	if (aRate < 0) 
-    		damage = 0;
-    	else 
-    		damage = (int) (strength * aRate) - prot.getDefense();
-    	prot.lowerHP(damage);
-    	return damage;
-    }
+    
 
 }

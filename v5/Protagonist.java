@@ -6,11 +6,7 @@
 public abstract class Protagonist extends Character {
 
     //Attributes
-    protected String name;
-    protected int life;
-    protected int strength;
-    protected int defense;
-    protected double aRate; //attack rating 
+    
 
     //Constructor
     public Protagonist() {
@@ -19,6 +15,7 @@ public abstract class Protagonist extends Character {
     strength = 5;
     defense = 5;
     aRate = 2.5;
+    type = "";
     }
     public Protagonist(String newname) {
 	name = newname;
@@ -26,44 +23,22 @@ public abstract class Protagonist extends Character {
 	strength = 5;
 	defense = 5;
 	aRate = 2.5;
+    type = "";
     }
 
-    //returns boolean indicating living/dead
-    public boolean isAlive() {
-	if (life <= 0)
-	    return false;
-	return true;
-    }
-
-    //returns value of defense attribute
-    public int getDefense() {
-	return defense;
-    }
-
-    //returns value of name attribute
-    public String getName() {
-	return name;
-    }
-
-    //descreases life by parameter
-    public int lowerHP(int n) {
-	life -= n;
-	if (life <= 0)
-	    return 0;
-	return life;
+    public int attack(Character user) {
+        int damage;
+        if (aRate < 0)
+            damage = 0;
+        else
+            damage = (int)((strength * aRate) - user.getDefense());
+        user.lowerHP(damage);
+        return damage;
     }
 
     //calculates attack
     //how to access mDefense (Monster defense)
-    public int attack(Monster grr) {
-	 
-	int damage = (int) (strength * aRate) - grr.getDefense();
-	if (damage <= 0)
-	    return 0;
-	grr.lowerHP(damage);
-     	return damage;
-    }
-
+    
     //prepares Protagonist for special attack
     public abstract void specialize();
 
