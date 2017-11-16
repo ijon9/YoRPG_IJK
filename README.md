@@ -1,5 +1,11 @@
 # YoRPG_IJK
 
+# To Do
+## Create rock paper scissor esque attack style with hero vs monster type
+* Wizards are strong against Vampires
+* Knights are strong against Zombies
+* Elves are strong against Werewolves
+
 # Wizard Hero
 ## Lightly armed and lightly armored with a quick attack.
 * 75 HP
